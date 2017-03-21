@@ -37,6 +37,7 @@
 #include "SSAEvaluator.hpp"
 #include "RandomEvaluator.hpp"
 #include "HighestDegreeEvaluator.hpp"
+#include "AdaptiveHighestDegreeEvaluator.hpp"
 #include "DiscountDegreeEvaluator.hpp"
 #include "PMCEvaluator.hpp"
 #include "Strategy.hpp"
@@ -185,7 +186,8 @@ int main(int argc, const char * argv[]) {
   // Vector of different Evaluator implementations
   std::vector<std::unique_ptr<Evaluator>> evaluators;
   evaluators.push_back(std::unique_ptr<Evaluator>(new RandomEvaluator()));
-  evaluators.push_back(std::unique_ptr<Evaluator>(new DiscountDegreeEvaluator()));
+  evaluators.push_back(std::unique_ptr<Evaluator>(
+      new AdaptiveHighestDegreeEvaluator()));
   evaluators.push_back(std::unique_ptr<Evaluator>(new HighestDegreeEvaluator()));
   evaluators.push_back(std::unique_ptr<Evaluator>(new CELFEvaluator(100)));
   evaluators.push_back(std::unique_ptr<Evaluator>(new TIMEvaluator()));

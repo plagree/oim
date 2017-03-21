@@ -58,7 +58,7 @@ The parameters are set as follows:
 * *graph* is the name of the graph file
 * *alpha*, *beta* are the global prior on the edges of the graph
 * *exploit*, *explore* can take any of the following values: **0** Random,
-  **1** Discountdegree, **2** Maxdegree, **3** [CELF][2], **4** [TIM][3],
+  **1** AdaptiveDegree, **2** Maxdegree, **3** [CELF][2], **4** [TIM][3],
   **5** [SSA][4], **6** [PMC][5]
 * *samples* is the number of spreads to estimate the expected value of chosen
   seeds

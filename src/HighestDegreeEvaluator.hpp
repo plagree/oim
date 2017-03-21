@@ -28,6 +28,11 @@
 
 #include <boost/heap/fibonacci_heap.hpp>
 
+/**
+* This method orders vertices by decreaing outdegrees. It never plays the same
+* node several times. See AdaptiveHighestDegree for an adaptive version of this
+* baseline.
+*/
 class HighestDegreeEvaluator : public Evaluator {
  private:
   std::unordered_set<unode_int> seed_sets_;
